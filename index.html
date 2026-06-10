@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>24*7 Rentals</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <header>
+
+    <nav class="navbar">
+
+      <div class="logo">
+        24*7 Rentals
+      </div>
+
+      <ul class="nav-links">
+
+        <li><a href="#home">Home</a></li>
+        <li><a href="#booking">Booking</a></li>
+        <li><a href="#cars">Cars</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="#contact">Contact</a></li>
+
+      </ul>
+
+    </nav>
+
+  </header>
+
+  <!-- HERO -->
+
+  <section class="hero" id="home">
+
+    <div class="hero-content">
+
+      <h1>
+        Premium Car Rentals
+      </h1>
+
+      <p>
+        Affordable luxury rides for city travel,
+        road trips and business journeys.
+      </p>
+
+      <a href="#booking">
+        <button class="hero-btn">
+          Book A Ride
+        </button>
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- BOOKING -->
+
+  <section class="booking-section" id="booking">
+
+    <div class="section-title">
+      <h2>Book Your Car</h2>
+      <p>Select your destination and preferred vehicle</p>
+    </div>
+
+    <form class="booking-form">
+
+      <div class="input-group">
+
+        <label>Pickup Location</label>
+
+        <input
+          type="text"
+          list="locations"
+          placeholder="Enter pickup location"
+        >
+
+      </div>
+
+      <div class="input-group">
+
+        <label>Drop Location</label>
+
+        <input
+          type="text"
+          list="locations"
+          placeholder="Enter destination"
+        >
+
+      </div>
+
+      <datalist id="locations">
+
+        <option value="Hyderabad">
+        <option value="Bangalore">
+        <option value="Chennai">
+        <option value="Mumbai">
+        <option value="Delhi">
+        <option value="Vizag">
+        <option value="Goa">
+        <option value="Pune">
+
+      </datalist>
+
+      <div class="input-group">
+
+        <label>Pickup Date</label>
+
+        <input type="date">
+
+      </div>
+
+      <div class="input-group">
+
+        <label>Pickup Time</label>
+
+        <input type="time">
+
+      </div>
+
+      <div class="input-group">
+
+        <label>Vehicle Type</label>
+
+        <select>
+
+          <option>Sedan</option>
+          <option>SUV</option>
+          <option>XUV</option>
+          <option>Luxury</option>
+          <option>Sports</option>
+
+        </select>
+
+      </div>
+
+      <div class="input-group">
+
+        <label>Select Car</label>
+
+        <select>
+
+          <option>Honda City</option>
+          <option>Hyundai Creta</option>
+          <option>Mahindra XUV 700</option>
+          <option>Kia seltos</option>
+          <option>Kia carens</option>
+          <option>Thar Roxx</option>
+          <option>Suzuki Brezza</option>
+
+        </select>
+
+      </div>
+
+      <button class="book-btn">
+        Confirm Booking
+      </button>
+
+    </form>
+
+  </section>
+
+  <!-- CARS -->
+
+  <section class="cars-section" id="cars">
+
+    <div class="section-title">
+      <h2>Available Cars</h2>
+      <p>Choose from economy to luxury vehicles</p>
+    </div>
+
+    <div class="cars-container">
+
+      <!-- CARD -->
+
+      <div class="car-card">
+
+        <img src="https://images.unsplash.com/photo-1594070319944-7c0cbebb6f58?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+
+        <div class="car-details">
+
+          <div class="car-top">
+
+            <h3>Honda City</h3>
+
+            <span>₹3,000/day</span>
+
+          </div>
+
+          <p>Sedan • Petrol • Automatic</p>
+
+          <button>
+            Book Now
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- CARD -->
+
+      <div class="car-card">
+
+        <img src="https://images.unsplash.com/photo-1748214547184-d994bfe53322?q=80&w=1488&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+
+        <div class="car-details">
+
+          <div class="car-top">
+
+            <h3>Hyundai Creta</h3>
+
+            <span>₹4,200/day</span>
+
+          </div>
+
+          <p>SUV • Diesel • Automatic</p>
+
+          <button>
+            Book Now
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- CARD -->
+
+      <div class="car-card">
+
+        <img src="https://images.unsplash.com/photo-1706879186587-e5692ad352bf?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+
+        <div class="car-details">
+
+          <div class="car-top">
+
+            <h3>Mahindra XUV 700</h3>
+
+            <span>₹6,500/day</span>
+
+          </div>
+
+          <p>Luxury • Petrol • Manual</p>
+
+          <button>
+            Book Now
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- CARD -->
+
+      <div class="car-card">
+
+        <img src="https://images.unsplash.com/photo-1718762395094-fa40f65a88e8?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+
+        <div class="car-details">
+
+          <div class="car-top">
+
+            <h3>Kia seltos</h3>
+
+            <span>₹5,000/day</span>
+
+          </div>
+
+          <p>Petrol • Manual</p>
+
+          <button>
+            Book Now
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- CARD -->
+
+      <div class="car-card">
+
+        <img src="https://images.unsplash.com/photo-1710594022719-a37944dc12ae?q=80&w=429&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+
+        <div class="car-details">
+
+          <div class="car-top">
+
+            <h3>Kia Carens</h3>
+
+            <span>₹8000/day</span>
+
+          </div>
+
+          <p>Petrol • Automatic</p>
+
+          <button>
+            Book Now
+          </button>
+
+        </div>
+
+      </div> 
+      <!-- CARD -->
+
+      <div class="car-card">
+
+        <img src="https://images.unsplash.com/photo-1710225358761-4f5891df657d?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+
+        <div class="car-details">
+
+          <div class="car-top">
+
+            <h3>Mahindra Thar</h3>
+
+            <span>₹8000/day</span>
+
+          </div>
+
+          <p>Diesel • Automatic</p>
+
+          <button>
+            Book Now
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- CARD -->
+
+      <div class="car-card">
+
+        <img src="https://images.unsplash.com/photo-1652709830696-1e88c2d9247b?q=80&w=435&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+
+        <div class="car-details">
+
+          <div class="car-top">
+
+            <h3>Mahindra Scorpio</h3>
+
+            <span>₹6000/day</span>
+
+          </div>
+
+          <p>Diesel • Automatic</p>
+
+          <button>
+            Book Now
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- MAP -->
+
+  <section class="location" id="location">
+
+    <div class="section-title">
+      <h2>Find Us</h2>
+      <p>Visit our nearest rental hub</p>
+    </div>
+
+    <div class="map-box">
+
+      <iframe
+        src="https://maps.google.com/maps?q=hyderabad&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        loading="lazy">
+      </iframe>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+
+  <section class="contact" id="contact">
+
+    <div class="section-title">
+      <h2>Contact Us</h2>
+      <p>We are available 24/7 for support</p>
+    </div>
+
+    <form class="contact-form">
+
+      <input type="text" placeholder="Your Name">
+
+      <input type="email" placeholder="Your Email">
+
+      <textarea placeholder="Your Message"></textarea>
+
+      <button>
+        Send Message
+      </button>
+
+    </form>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © 2026 24*7 Rentals. All rights reserved.
+    </p>
+
+  </footer>
+
+</body>
+</html>
