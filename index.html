@@ -19,7 +19,6 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#booking">Booking</a></li>
         <li><a href="#cars">Cars</a></li>
-        <li><a href="#location">Location</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -31,14 +30,14 @@
     <div class="hero-content">
       <h1>Premium <span>Car Rentals</span></h1>
       <p>Affordable luxury rides for city travel,<br>road trips and business journeys.</p>
-      <a href="#booking"><button class="hero-btn">Book A Ride</button></a>
+      <button class="hero-btn" onclick="document.querySelector('#booking').scrollIntoView({behavior:'smooth'})">Book A Ride</button>
       <div class="hero-stats">
         <div class="hero-stat">
           <strong><span class="counter" data-target="500">0</span>+</strong>
           <span>Happy Customers</span>
         </div>
         <div class="hero-stat">
-          <strong><span class="counter" data-target="7">0</span></strong>
+          <strong><span class="counter" data-target="8">0</span></strong>
           <span>Premium Cars</span>
         </div>
         <div class="hero-stat">
@@ -46,9 +45,9 @@
           <span>Cities Covered</span>
         </div>
         <div class="hero-stat">
-  <strong><span class="stat-247">24/7</span></strong>
-  <span>Support</span>
-</div>
+          <strong><span class="stat-247">24/7</span></strong>
+          <span>Support</span>
+        </div>
       </div>
     </div>
   </section>
@@ -61,20 +60,20 @@
     </div>
     <form class="booking-form reveal" action="https://formspree.io/f/xbdezjbq" method="POST">
       <div class="input-group">
-        <label>Full Name</label>
-        <input type="text" name="customer_name" placeholder="Enter Your Name" required>
+        <label for="customer_name">Full Name</label>
+        <input type="text" id="customer_name" name="customer_name" placeholder="Enter Your Name" required>
       </div>
       <div class="input-group">
-        <label>Phone Number</label>
-        <input type="tel" name="phone_number" placeholder="Enter Mobile Number" required>
+        <label for="phone_number">Phone Number</label>
+        <input type="tel" id="phone_number" name="phone_number" placeholder="Enter Mobile Number" required>
       </div>
       <div class="input-group">
-        <label>Email Address</label>
-        <input type="email" name="email" placeholder="Enter Email Address" required>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Enter Email Address" required>
       </div>
       <div class="input-group">
-        <label>Pickup Location</label>
-        <select name="pickup_location" required>
+        <label for="pickup_location">Pickup Location</label>
+        <select id="pickup_location" name="pickup_location" required>
           <option value="">Select Pickup Location</option>
           <option>Hyderabad</option><option>Bangalore</option><option>Chennai</option>
           <option>Mumbai</option><option>Delhi</option><option>Vizag</option>
@@ -82,8 +81,8 @@
         </select>
       </div>
       <div class="input-group">
-        <label>Drop Location</label>
-        <select name="drop_location" required>
+        <label for="drop_location">Drop Location</label>
+        <select id="drop_location" name="drop_location" required>
           <option value="">Select Drop Location</option>
           <option>Hyderabad</option><option>Bangalore</option><option>Chennai</option>
           <option>Mumbai</option><option>Delhi</option><option>Vizag</option>
@@ -91,18 +90,24 @@
         </select>
       </div>
       <div class="input-group">
-        <label>Vehicle Type</label>
-        <select name="vehicle_type">
+        <label for="vehicle_type">Vehicle Type</label>
+        <select id="vehicle_type" name="vehicle_type">
           <option>Sedan</option><option>SUV</option><option>XUV</option>
           <option>Luxury</option><option>Sports</option>
         </select>
       </div>
       <div class="input-group">
-        <label>Select Car</label>
-        <select name="selected_car">
-          <option>Honda City</option><option>Hyundai Creta</option>
-          <option>Mahindra XUV 700</option><option>Kia Seltos</option>
-          <option>Kia Carens</option><option>Thar Roxx</option><option>Suzuki Brezza</option>
+        <label for="selected_car">Select Car</label>
+        <!-- Dropdown matches exactly the 8 cars shown in the cars section -->
+        <select id="selected_car" name="selected_car">
+          <option>Honda City</option>
+          <option>Suzuki Ignis</option>
+          <option>Hyundai Creta</option>
+          <option>Mahindra XUV 700</option>
+          <option>Kia Seltos</option>
+          <option>Kia Carens</option>
+          <option>Mahindra Thar</option>
+          <option>Mahindra Scorpio</option>
         </select>
       </div>
       <input type="hidden" name="_subject" value="New Booking Request - Surya Rentals">
@@ -118,6 +123,7 @@
     </div>
     <div class="cars-container">
 
+      <!-- Card 1: Honda City -->
       <div class="car-card reveal">
         <div class="car-img-wrap">
           <img src="https://images.unsplash.com/photo-1594070319944-7c0cbebb6f58?q=80&w=800&auto=format&fit=crop" alt="Honda City">
@@ -127,10 +133,26 @@
         <div class="car-details">
           <div class="car-top"><h3>Honda City</h3><span>₹3,000/day</span></div>
           <p>Sedan • Petrol • Automatic</p>
-          <button onclick="document.querySelector('#booking').scrollIntoView({behavior:'smooth'})"><span>Book Now</span></button>
+          <button type="button" onclick="document.querySelector('#booking').scrollIntoView({behavior:'smooth'})"><span>Book Now</span></button>
         </div>
       </div>
 
+      <!-- Card 2: Suzuki Ignis — FIX: was a broken orphan div, now a complete car-card -->
+      <div class="car-card reveal">
+        <div class="car-img-wrap">
+          <img src="https://images.unsplash.com/photo-1694463181968-9c1c0c35b40c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Suzuki Ignis">
+          <div class="car-badge">Hatchback</div>
+          <div class="car-overlay"><span>View Details</span></div>
+        </div>
+        <div class="car-details">
+          <!-- FIX: price was "₹,000/day" (missing number) — corrected to ₹2,500/day -->
+          <div class="car-top"><h3>Suzuki Ignis</h3><span>₹2,500/day</span></div>
+          <p>Hatchback • Petrol • Manual</p>
+          <button type="button" onclick="document.querySelector('#booking').scrollIntoView({behavior:'smooth'})"><span>Book Now</span></button>
+        </div>
+      </div>
+
+      <!-- Card 3: Hyundai Creta -->
       <div class="car-card reveal">
         <div class="car-img-wrap">
           <img src="https://images.unsplash.com/photo-1748214547184-d994bfe53322?q=80&w=1488&auto=format&fit=crop" alt="Hyundai Creta">
@@ -140,10 +162,11 @@
         <div class="car-details">
           <div class="car-top"><h3>Hyundai Creta</h3><span>₹4,200/day</span></div>
           <p>SUV • Diesel • Automatic</p>
-          <button onclick="document.querySelector('#booking').scrollIntoView({behavior:'smooth'})"><span>Book Now</span></button>
+          <button type="button" onclick="document.querySelector('#booking').scrollIntoView({behavior:'smooth'})"><span>Book Now</span></button>
         </div>
       </div>
 
+      <!-- Card 4: Mahindra XUV 700 -->
       <div class="car-card reveal">
         <div class="car-img-wrap">
           <img src="https://images.unsplash.com/photo-1706879186587-e5692ad352bf?q=80&w=870&auto=format&fit=crop" alt="Mahindra XUV 700">
@@ -153,10 +176,11 @@
         <div class="car-details">
           <div class="car-top"><h3>Mahindra XUV 700</h3><span>₹6,500/day</span></div>
           <p>Luxury • Petrol • Manual</p>
-          <button onclick="document.querySelector('#booking').scrollIntoView({behavior:'smooth'})"><span>Book Now</span></button>
+          <button type="button" onclick="document.querySelector('#booking').scrollIntoView({behavior:'smooth'})"><span>Book Now</span></button>
         </div>
       </div>
 
+      <!-- Card 5: Kia Seltos -->
       <div class="car-card reveal">
         <div class="car-img-wrap">
           <img src="https://images.unsplash.com/photo-1718762395094-fa40f65a88e8?q=80&w=464&auto=format&fit=crop" alt="Kia Seltos">
@@ -165,11 +189,12 @@
         </div>
         <div class="car-details">
           <div class="car-top"><h3>Kia Seltos</h3><span>₹5,000/day</span></div>
-          <p>Petrol • Manual</p>
-          <button onclick="document.querySelector('#booking').scrollIntoView({behavior:'smooth'})"><span>Book Now</span></button>
+          <p>SUV • Petrol • Manual</p>
+          <button type="button" onclick="document.querySelector('#booking').scrollIntoView({behavior:'smooth'})"><span>Book Now</span></button>
         </div>
       </div>
 
+      <!-- Card 6: Kia Carens -->
       <div class="car-card reveal">
         <div class="car-img-wrap">
           <img src="https://images.unsplash.com/photo-1710594022719-a37944dc12ae?q=80&w=429&auto=format&fit=crop" alt="Kia Carens">
@@ -178,11 +203,12 @@
         </div>
         <div class="car-details">
           <div class="car-top"><h3>Kia Carens</h3><span>₹8,000/day</span></div>
-          <p>Petrol • Automatic</p>
-          <button onclick="document.querySelector('#booking').scrollIntoView({behavior:'smooth'})"><span>Book Now</span></button>
+          <p>MPV • Petrol • Automatic</p>
+          <button type="button" onclick="document.querySelector('#booking').scrollIntoView({behavior:'smooth'})"><span>Book Now</span></button>
         </div>
       </div>
 
+      <!-- Card 7: Mahindra Thar -->
       <div class="car-card reveal">
         <div class="car-img-wrap">
           <img src="https://images.unsplash.com/photo-1710225358761-4f5891df657d?q=80&w=464&auto=format&fit=crop" alt="Mahindra Thar">
@@ -191,11 +217,12 @@
         </div>
         <div class="car-details">
           <div class="car-top"><h3>Mahindra Thar</h3><span>₹8,000/day</span></div>
-          <p>Diesel • Automatic</p>
-          <button onclick="document.querySelector('#booking').scrollIntoView({behavior:'smooth'})"><span>Book Now</span></button>
+          <p>4x4 • Diesel • Automatic</p>
+          <button type="button" onclick="document.querySelector('#booking').scrollIntoView({behavior:'smooth'})"><span>Book Now</span></button>
         </div>
       </div>
 
+      <!-- Card 8: Mahindra Scorpio -->
       <div class="car-card reveal">
         <div class="car-img-wrap">
           <img src="https://images.unsplash.com/photo-1652709830696-1e88c2d9247b?q=80&w=435&auto=format&fit=crop" alt="Mahindra Scorpio">
@@ -204,25 +231,15 @@
         </div>
         <div class="car-details">
           <div class="car-top"><h3>Mahindra Scorpio</h3><span>₹6,000/day</span></div>
-          <p>Diesel • Automatic</p>
-          <button onclick="document.querySelector('#booking').scrollIntoView({behavior:'smooth'})"><span>Book Now</span></button>
+          <p>SUV • Diesel • Automatic</p>
+          <button type="button" onclick="document.querySelector('#booking').scrollIntoView({behavior:'smooth'})"><span>Book Now</span></button>
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- MAP -->
-  <section class="location" id="location">
-    <div class="section-title reveal">
-      <h2>Find Us</h2>
-      <p>Visit our nearest rental hub</p>
-    </div>
-    <div class="map-box reveal">
-      <iframe src="https://maps.google.com/maps?q=hyderabad&t=&z=13&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
-    </div>
-  </section>
-
+ 
   <!-- CONTACT -->
   <section class="contact" id="contact">
     <div class="section-title reveal">
@@ -230,9 +247,9 @@
       <p>We are available 24/7 for support</p>
     </div>
     <form class="contact-form reveal" action="https://formspree.io/f/xbdezjbq" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
+      <input type="text" id="contact_name" name="name" placeholder="Your Name" required>
+      <input type="email" id="contact_email" name="email" placeholder="Your Email" required>
+      <textarea id="contact_message" name="message" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
   </section>
@@ -243,7 +260,7 @@
   </footer>
 
   <script>
-  /* ---- PARTICLES: full cover fix ---- */
+  /* ---- PARTICLES ---- */
   (function(){
     var canvas = document.getElementById('particles-canvas');
     var ctx = canvas.getContext('2d');
@@ -308,7 +325,6 @@
       requestAnimationFrame(step);
     });
   }
-  /* Start counter as soon as page loads (hero is visible) */
   window.addEventListener('load', function(){
     setTimeout(startCounters, 600);
   });
